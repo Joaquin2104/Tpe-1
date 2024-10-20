@@ -1,0 +1,14 @@
+<?php
+
+class AuthView {
+
+
+
+    public function showLogin($error = '') {
+        require 'templates/form_login.phtml';
+    }
+
+    public function logout() {
+        require 'templates/logout.phtml';
+    }
+}

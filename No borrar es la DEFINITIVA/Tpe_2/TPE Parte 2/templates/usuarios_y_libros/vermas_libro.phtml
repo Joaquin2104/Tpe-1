@@ -1,0 +1,12 @@
+<?php 
+require './templates/layouts/header.phtml';
+
+if (isset($libro)) {
+    echo '<h1>' . $libro->Nombre . '</h1>';
+    echo '<p>Genero: ' . $libro->Genero . '</p>';
+    echo '<p>Precio: ' . $libro->Precio . '</p>';
+    echo '<p>Usuarios que tienen este libro: ' . $libro->id_usuario . '</p>';
+}
+
+require './templates/layouts/footer.phtml';
+?>

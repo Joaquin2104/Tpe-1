@@ -1,0 +1,28 @@
+<?php require './templates/layouts/header.phtml' ?>
+<?php require './templates/usuarios_y_libros/formulario_libros.phtml' ?>
+
+<h1>Libros</h1>
+<ul class="list-group">
+    <?php foreach ($libros as $libro): ?>
+        <li class="list-group-item item-libro>' 
+            <div class ="label">
+                <b><?= htmlspecialchars($libro->Nombre) ?></b>
+            </div>
+            <div>
+            <a href="ver_mas_libro/<?=$libro->Id?>">Ver más</a> .
+            </div>
+            <div>
+                <a href="eliminar_libro/<?=$libro->Id?>">Borrar</a>
+            </div>
+        </li>
+    <?php endforeach ?>
+</ul>
+
+<?php
+    if (isset($count)){
+        echo '<p class="mt-3"><small> mostrando ' . $count . ' libros </small></p>';
+    }
+?>
+
+<?php require './templates/usuarios_y_libros/editar_libros.phtml' ?>
+
